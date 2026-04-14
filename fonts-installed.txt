@@ -1,0 +1,9 @@
+CascadiaCove
+illogical-impulse-google-sans-flex
+JetBrains
+MapleMono
+MaterialDesign
+Mononoki
+NotoSansCJK
+SF-Pro
+SF-Pro-Full

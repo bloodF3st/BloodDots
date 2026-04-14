@@ -1,0 +1,4 @@
+com.spotify.Client	1.2.84.475.ga1a748ff
+org.kde.filelight	25.12.3
+org.mozilla.firefox	149.0
+org.telegram.desktop	6.7.5
