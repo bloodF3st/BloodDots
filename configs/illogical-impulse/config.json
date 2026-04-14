@@ -74,13 +74,13 @@
         "parallax": {
             "autoVertical": false,
             "enableSidebar": true,
-            "enableWorkspace": true,
+            "enableWorkspace": false,
             "vertical": false,
             "widgetsFactor": 1.2,
             "workspaceZoom": 1.07
         },
         "thumbnailPath": "/home/shafty/.config/hypr/custom/scripts/mpvpaper_thumbnails/sakura-falls-arknights-endfield-moewalls-com.mp4.jpg",
-        "wallpaperPath": "/home/shafty/Pictures/wallpapers/video/sakura-falls.mp4",
+        "wallpaperPath": "/home/shafty/Pictures/HyDE/Timeless Dream/C.png",
         "widgets": {
             "clock": {
                 "cookie": {
