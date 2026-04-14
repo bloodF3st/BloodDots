@@ -2,20 +2,20 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Toolbar / header */
-    --gnome-toolbar-background:             rgba(30, 30, 46, 0.15) !important;
-    --gnome-headerbar-background:           rgba(24, 24, 37, 0.15) !important;
-    --gnome-tabstoolbar-background:         rgba(30, 30, 46, 0.10) !important;
-    --gnome-findbar-background:             rgba(24, 24, 37, 0.20) !important;
-    --gnome-sidebar-background:             rgba(30, 30, 46, 0.10) !important;
-    --gnome-menu-background:                rgba(17, 17, 27, 0.60) !important;
-    --gnome-popover-background:             rgba(17, 17, 27, 0.60) !important;
-    --gnome-browser-before-load-background: rgba(30, 30, 46, 0.10) !important;
-    --gnome-toolbar-border-color:           rgba(203, 166, 247, 0.10) !important;
+    --gnome-toolbar-background:             rgba(30, 30, 46, 0.45) !important;
+    --gnome-headerbar-background:           rgba(24, 24, 37, 0.45) !important;
+    --gnome-tabstoolbar-background:         rgba(30, 30, 46, 0.40) !important;
+    --gnome-findbar-background:             rgba(24, 24, 37, 0.50) !important;
+    --gnome-sidebar-background:             rgba(30, 30, 46, 0.40) !important;
+    --gnome-menu-background:                rgba(17, 17, 27, 0.70) !important;
+    --gnome-popover-background:             rgba(17, 17, 27, 0.70) !important;
+    --gnome-browser-before-load-background: rgba(30, 30, 46, 0.40) !important;
+    --gnome-toolbar-border-color:           rgba(203, 166, 247, 0.15) !important;
 
     /* Inactive = active */
-    --gnome-inactive-toolbar-background:    rgba(24, 24, 37, 0.15) !important;
-    --gnome-inactive-headerbar-background:  rgba(24, 24, 37, 0.15) !important;
-    --gnome-inactive-sidebar-background:    rgba(30, 30, 46, 0.10) !important;
+    --gnome-inactive-toolbar-background:    rgba(24, 24, 37, 0.45) !important;
+    --gnome-inactive-headerbar-background:  rgba(24, 24, 37, 0.45) !important;
+    --gnome-inactive-sidebar-background:    rgba(30, 30, 46, 0.40) !important;
     --gnome-inactive-toolbar-color:         rgba(205, 214, 244, 0.9) !important;
     --gnome-inactive-toolbar-border-color:  rgba(203, 166, 247, 0.10) !important;
 

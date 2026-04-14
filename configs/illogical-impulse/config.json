@@ -80,7 +80,7 @@
             "workspaceZoom": 1.07
         },
         "thumbnailPath": "",
-        "wallpaperPath": "/home/shafty/Downloads/default.png",
+        "wallpaperPath": "/home/shafty/Pictures/wallpapers/video/sakura-falls.mp4",
         "widgets": {
             "clock": {
                 "cookie": {
@@ -307,7 +307,7 @@
         "timeout": 1000
     },
     "osk": {
-        "layout": "Russian",
+        "layout": "English",
         "pinnedOnStartup": false
     },
     "overlay": {

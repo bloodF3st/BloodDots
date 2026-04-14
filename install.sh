@@ -53,7 +53,7 @@ PACMAN_PKGS=(
 
     # Screen / media
     grim slurp satty swayosd brightnessctl playerctl
-    ffmpegthumbs swww
+    ffmpegthumbs swww mpvpaper ffmpeg
 
     # Clipboard history
     cliphist
