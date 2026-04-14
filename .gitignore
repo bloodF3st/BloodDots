@@ -1,0 +1,23 @@
+# Secrets & tokens
+*.key
+*.pem
+*.token
+configs/fish/fish_history
+configs/fish/fish_read_history
+configs/hypr/hyprland/scripts/ai/
+configs/quickshell/ii/services/ai/
+*.secret
+
+# Cache & generated
+configs/quickshell/ii/.cache/
+configs/hypr/hyprland/scripts/__pycache__/
+configs/fish/__pycache__/
+*.pyc
+*.pyo
+
+# Large binary / wallpapers inside configs
+configs/hypr/themes/*/wallpapers/
+
+# GPU / machine-specific overrides
+configs/hypr/monitors.conf
+configs/hypr/workspaces.conf

@@ -1,0 +1,14 @@
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("browser.tabs.drawInTitlebar", true);
+user_pref("browser.uidensity", 0);
+user_pref("layers.acceleration.force-enabled", true);
+user_pref("mozilla.widget.use-argb-visuals", true);
+user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
+user_pref("svg.context-properties.content.enabled", true);
+user_pref("ui.systemUsesDarkTheme", 1);
+user_pref("browser.theme.content-theme", 0);
+user_pref("widget.transparent-windows", true);
+user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("layout.css.prefers-color-scheme.content-override", 0);
+user_pref("gfx.webrender.all", true);
+user_pref("gfx.webrender.compositor", true);

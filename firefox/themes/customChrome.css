@@ -1,0 +1,41 @@
+/* Catppuccin Mocha — transparent tabs + toolbar, Hyprland blur does the work */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Toolbar / header */
+    --gnome-toolbar-background:             rgba(30, 30, 46, 0.15) !important;
+    --gnome-headerbar-background:           rgba(24, 24, 37, 0.15) !important;
+    --gnome-tabstoolbar-background:         rgba(30, 30, 46, 0.10) !important;
+    --gnome-findbar-background:             rgba(24, 24, 37, 0.20) !important;
+    --gnome-sidebar-background:             rgba(30, 30, 46, 0.10) !important;
+    --gnome-menu-background:                rgba(17, 17, 27, 0.60) !important;
+    --gnome-popover-background:             rgba(17, 17, 27, 0.60) !important;
+    --gnome-browser-before-load-background: rgba(30, 30, 46, 0.10) !important;
+    --gnome-toolbar-border-color:           rgba(203, 166, 247, 0.10) !important;
+
+    /* Inactive = active */
+    --gnome-inactive-toolbar-background:    rgba(24, 24, 37, 0.15) !important;
+    --gnome-inactive-headerbar-background:  rgba(24, 24, 37, 0.15) !important;
+    --gnome-inactive-sidebar-background:    rgba(30, 30, 46, 0.10) !important;
+    --gnome-inactive-toolbar-color:         rgba(205, 214, 244, 0.9) !important;
+    --gnome-inactive-toolbar-border-color:  rgba(203, 166, 247, 0.10) !important;
+
+    /* URL bar — Catppuccin вместо серого */
+    --gnome-urlbar-background:              rgba(49, 50, 68, 0.35) !important;
+    --gnome-urlbar-border-color:            rgba(203, 166, 247, 0.20) !important;
+    --gnome-urlbar-color:                   #cdd6f4 !important;
+    --gnome-inactive-urlbar-background:     rgba(49, 50, 68, 0.20) !important;
+    --gnome-inactive-urlbar-color:          rgba(205, 214, 244, 0.7) !important;
+    --gnome-focused-urlbar-border-color:    rgba(203, 166, 247, 0.70) !important;
+    --gnome-focused-urlbar-highlight-color: rgba(203, 166, 247, 0.15) !important;
+
+    /* Tabs — прозрачные вместо чёрных */
+    --gnome-tabbar-tab-background:                    rgba(30, 30, 46, 0.05) !important;
+    --gnome-tabbar-tab-hover-background:              rgba(49, 50, 68, 0.25) !important;
+    --gnome-tabbar-tab-active-background:             rgba(49, 50, 68, 0.40) !important;
+    --gnome-tabbar-tab-active-hover-background:       rgba(49, 50, 68, 0.50) !important;
+    --gnome-inactive-tabbar-tab-background:           rgba(30, 30, 46, 0.05) !important;
+    --gnome-inactive-tabbar-tab-active-background:    rgba(30, 30, 46, 0.20) !important;
+  }
+}
+
+*:-moz-window-inactive { opacity: 1 !important; }

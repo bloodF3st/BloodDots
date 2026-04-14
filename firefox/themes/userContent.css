@@ -1,0 +1,23 @@
+@import "WhiteSur/colors/light.css";
+@import "WhiteSur/colors/darker.css";
+
+@import "WhiteSur/pages/common.css";
+@import "WhiteSur/pages/newtab.css";
+@import "WhiteSur/pages/reader.css";
+@import "WhiteSur/pages/privatebrowsing.css";
+
+/* Catppuccin Mocha new tab — transparent so Hyprland blur shows through */
+@-moz-document url("about:newtab"), url("about:home") {
+  @media (prefers-color-scheme: dark) {
+    body {
+      --newtab-background-color:           rgba(30, 30, 46, 0.35) !important;
+      --newtab-background-color-secondary: rgba(24, 24, 37, 0.40) !important;
+      --newtab-background-card:            rgba(49, 50, 68, 0.45) !important;
+      --fxview-background-color:           rgba(30, 30, 46, 0.35) !important;
+      background: rgba(30, 30, 46, 0.35) !important;
+    }
+    .outer-wrapper, #root {
+      background: transparent !important;
+    }
+  }
+}
