@@ -79,7 +79,7 @@
             "widgetsFactor": 1.2,
             "workspaceZoom": 1.07
         },
-        "thumbnailPath": "",
+        "thumbnailPath": "/home/shafty/.config/hypr/custom/scripts/mpvpaper_thumbnails/sakura-falls-arknights-endfield-moewalls-com.mp4.jpg",
         "wallpaperPath": "/home/shafty/Pictures/wallpapers/video/sakura-falls.mp4",
         "widgets": {
             "clock": {
@@ -307,7 +307,7 @@
         "timeout": 1000
     },
     "osk": {
-        "layout": "English",
+        "layout": "Russian",
         "pinnedOnStartup": false
     },
     "overlay": {
