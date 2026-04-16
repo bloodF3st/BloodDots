@@ -22,6 +22,7 @@ Scope {
 
         anchors {
             top: true
+            left: true
             right: true
             bottom: true
         }
@@ -31,18 +32,15 @@ Scope {
         }
 
         color: "transparent"
-        implicitWidth: Appearance.sizes.notificationPopupWidth
 
         NotificationListView {
             id: listview
             anchors {
                 top: parent.top
-                bottom: parent.bottom
-                right: parent.right
-                rightMargin: 4
-                topMargin: 4
+                horizontalCenter: parent.horizontalCenter
+                topMargin: 8
             }
-            implicitWidth: parent.width - Appearance.sizes.elevationMargin * 2
+            implicitWidth: Appearance.sizes.notificationPopupWidth
             popup: true
         }
     }

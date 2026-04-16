@@ -35,7 +35,7 @@
         },
         "transparency": {
             "automatic": false,
-            "backgroundTransparency": 0.55,
+            "backgroundTransparency": 0.75,
             "contentTransparency": 0.35,
             "enable": true
         },

@@ -113,8 +113,10 @@ Item { // Notification item area
         id: background
         width: parent.width
         anchors.left: parent.left
-        radius: Appearance.rounding.small
+        radius: Appearance.rounding.large
         anchors.leftMargin: root.xOffset
+        border.width: onlyNotification ? 0 : 1
+        border.color: ColorUtils.applyAlpha(Appearance.m3colors.m3outlineVariant, 0.25)
 
         Behavior on anchors.leftMargin {
             enabled: !dragManager.dragging
@@ -125,11 +127,12 @@ Item { // Notification item area
             }
         }
 
-        color: (expanded && !onlyNotification) ? 
-            (notificationObject.urgency == NotificationUrgency.Critical) ? 
-                ColorUtils.mix(Appearance.colors.colSecondaryContainer, Appearance.colors.colLayer2, 0.35) :
-                (Appearance.colors.colLayer3) :
-            ColorUtils.transparentize(Appearance.colors.colLayer3)
+        color: onlyNotification ? "transparent" :
+            (expanded && !onlyNotification) ?
+                (notificationObject.urgency == NotificationUrgency.Critical) ?
+                    ColorUtils.applyAlpha(ColorUtils.mix(Appearance.colors.colSecondaryContainer, Appearance.colors.colLayer2, 0.35), 0.55) :
+                    ColorUtils.applyAlpha(Appearance.colors.colLayer3, 0.45) :
+                ColorUtils.applyAlpha(Appearance.colors.colLayer3, 0.35)
 
         implicitHeight: expanded ? (contentColumn.implicitHeight + padding * 2) : summaryRow.implicitHeight
         Behavior on implicitHeight {

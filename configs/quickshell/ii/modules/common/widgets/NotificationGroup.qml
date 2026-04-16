@@ -117,28 +117,16 @@ MouseArea { // Notification group area
         target: background
         visible: popup
     }
-    // Glass border glow
-    Rectangle {
-        visible: popup
-        anchors.left: parent.left
-        anchors.leftMargin: root.xOffset - 1
-        width: parent.width + 2
-        height: background.height + 2
-        anchors.top: background.top
-        anchors.topMargin: -1
-        radius: Appearance.rounding.normal + 1
-        color: "transparent"
-        border.color: Qt.rgba(1, 1, 1, 0.12)
-        border.width: 1
-    }
     Rectangle { // Background of the notification
         id: background
         anchors.left: parent.left
         width: parent.width
         color: popup ?
-            ColorUtils.transparentize(Appearance.colors.colBackgroundSurfaceContainer, 0.45) :
+            ColorUtils.applyAlpha(Appearance.colors.colBackgroundSurfaceContainer, 0.5) :
             Appearance.colors.colLayer2
-        radius: Appearance.rounding.normal
+        radius: popup ? Appearance.rounding.large : Appearance.rounding.normal
+        border.width: popup ? 1 : 0
+        border.color: ColorUtils.applyAlpha(Appearance.m3colors.m3outlineVariant, 0.3)
         anchors.leftMargin: root.xOffset
 
         Behavior on anchors.leftMargin {

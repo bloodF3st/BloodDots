@@ -3,11 +3,14 @@ import QtQuick.Layouts
 
 import qs.modules.common
 import qs.modules.common.widgets
+import qs.modules.common.functions
 
 Rectangle {
     id: root
-    radius: Appearance.rounding.small
-    color: Appearance.colors.colSurfaceContainerHigh
+    radius: Appearance.rounding.large
+    color: ColorUtils.applyAlpha(Appearance.colors.colSurfaceContainerHigh, 0.45)
+    border.width: 1
+    border.color: ColorUtils.applyAlpha(Appearance.m3colors.m3outlineVariant, 0.25)
     implicitWidth: columnLayout.implicitWidth + 14 * 2
     implicitHeight: columnLayout.implicitHeight + 14 * 2
     Layout.fillWidth: parent

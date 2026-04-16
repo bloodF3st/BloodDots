@@ -12,7 +12,7 @@ import QtQuick.Layouts
 Rectangle {
     id: root
     radius: Appearance.rounding.normal
-    color: ColorUtils.transparentize(Appearance.colors.colLayer1, 0.45)
+    color: ColorUtils.applyAlpha(Appearance.colors.colLayer1, 0.45)
     border.width: 1
     border.color: Qt.rgba(1, 1, 1, 0.07)
     clip: true

@@ -1,6 +1,6 @@
 /*
-HyDE provides xdg/share/fastfetch/presets/hyde/*.config.jsonc files for different layouts. 
-You can also create your own config.jsonc file in the same directory to create a custom theme. 
+HyDE provides xdg/share/fastfetch/presets/hyde/*.config.jsonc files for different layouts.
+You can also create your own config.jsonc file in the same directory to create a custom theme.
 
 To test HyDE's fastfetch theme, run:
 fastfetch --config hyde/*.jsonc
@@ -20,7 +20,7 @@ fastfetch --config hyde/*.jsonc
   "modules": [
     {
       "type": "command",
-      "key": "  ",
+      "key": "  ",
       "keyColor": "blue",
       "text": "splash=$(hyprctl splash);echo $splash"
     },
@@ -41,7 +41,7 @@ fastfetch --config hyde/*.jsonc
     },
     {
       "type": "kernel",
-      "key": "   Kernel",
+      "key": "   Kernel",
       "format": "{2}",
       "keyColor": "red"
     },
@@ -51,14 +51,20 @@ fastfetch --config hyde/*.jsonc
       "keyColor": "green"
     },
     {
-      "type": "display",
+      "type": "command",
+      "text": "echo '2560x1440 @ 320Hz [External]'",
       "key": "  󰍹 Display",
-      "format": "{1}x{2} @ {3}Hz [{7}]",
+      "keyColor": "green"
+    },
+    {
+      "type": "command",
+      "text": "echo '1920x1080 @ 144Hz [External]'",
+      "key": "  󰍹 Display",
       "keyColor": "green"
     },
     {
       "type": "terminal",
-      "key": "   Terminal",
+      "key": "   Terminal",
       "keyColor": "yellow"
     },
     {
@@ -73,36 +79,37 @@ fastfetch --config hyde/*.jsonc
     },
     "break",
     {
-      "type": "title",
-      "key": "  ",
-      "format": "{6} {7} {8}"
+      "type": "command",
+      "key": "  ",
+      "text": "hostname"
     },
     {
       "type": "custom",
       "format": "┌──────────────────────────────────────────┐"
     },
     {
-      "type": "cpu",
-      "format": "{1} @ {7}",
-      "key": "   CPU",
+      "type": "command",
+      "text": "echo 'AMD Ryzen 9 9950X3D @ 5.70 GHz'",
+      "key": "   CPU",
       "keyColor": "blue"
     },
     {
-      "type": "gpu",
-      "format": "{1} {2}",
+      "type": "command",
+      "text": "echo 'NVIDIA GeForce RTX 5080'",
       "key": "  󰊴 GPU",
       "keyColor": "blue"
     },
     {
       "type": "gpu",
       "format": "{3}",
-      "key": "   GPU Driver",
+      "key": "   GPU Driver",
       "keyColor": "magenta"
     },
     {
-      "type": "memory",
-      "key": "   Memory ",
-      "keyColor": "magenta"
+      "type": "command",
+      "key": "   Memory ",
+      "keyColor": "magenta",
+      "text": "used=$(awk '/MemAvailable/{a=$2}/MemTotal/{t=$2}END{used=(t-a)/1048576; printf \"%.2f\", used}' /proc/meminfo); echo \"${used} GiB / 31.8 GiB ($(awk -v u=$used 'BEGIN{printf \"%d\", u/31.8*100}')%)\""
     },
     {
       "type": "disk",
