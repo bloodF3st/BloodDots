@@ -49,7 +49,7 @@ Singleton {
             "appIcon": notif.appIcon,
             "appName": notif.appName,
             "body": notif.body,
-            "image": notif.image,
+            "image": (notif.image && notif.image.startsWith("image://qsimage/")) ? "" : notif.image,
             "summary": notif.summary,
             "time": notif.time,
             "urgency": notif.urgency,

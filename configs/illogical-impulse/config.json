@@ -79,7 +79,7 @@
             "widgetsFactor": 1.2,
             "workspaceZoom": 1.07
         },
-        "thumbnailPath": "/home/shafty/.config/hypr/custom/scripts/mpvpaper_thumbnails/sakura-falls-arknights-endfield-moewalls-com.mp4.jpg",
+        "thumbnailPath": "/home/shafty/.config/hypr/custom/scripts/mpvpaper_thumbnails/zelda_ss.gif.jpg",
         "wallpaperPath": "/home/shafty/Pictures/HyDE/Timeless Dream/C.png",
         "widgets": {
             "clock": {
@@ -436,16 +436,16 @@
                         "type": "mic"
                     },
                     {
-                        "size": 2,
-                        "type": "audio"
-                    },
-                    {
-                        "size": 2,
-                        "type": "nightLight"
+                        "size": 1,
+                        "type": "screenSnip"
                     },
                     {
                         "size": 1,
-                        "type": "screenSnip"
+                        "type": "audio"
+                    },
+                    {
+                        "size": 1,
+                        "type": "musicRecognition"
                     }
                 ]
             },

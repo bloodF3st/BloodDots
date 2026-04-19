@@ -107,7 +107,7 @@ def get_all_files(*, dir_path: Path, recursive: bool) -> List[Path]:
 @click.option("-r", "--recursive", is_flag=True, default=False, help="Whether to recursively look for files")
 @click.option("--machine_progress", is_flag=True, default=False, help="Print machine-readable progress lines instead of a progress bar")
 def main(img_dirs: str, size: str, workers: str, only_images: bool, recursive: bool, machine_progress: bool) -> None:
-    img_dirs = [Path(img_dir) for img_dir in img_dirs.split()]
+    img_dirs = [Path(img_dirs)]
     global factory
     factory = GnomeDesktop.DesktopThumbnailFactory.new(thumbnail_size_map[size])
     for img_dir in img_dirs:
