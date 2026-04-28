@@ -19,7 +19,7 @@
     },
     "appearance": {
         "extraBackgroundTint": true,
-        "fakeScreenRounding": 2,
+        "fakeScreenRounding": 0,
         "fonts": {
             "expressive": "Rubik",
             "iconNerd": "JetBrains Mono NF",
@@ -75,7 +75,7 @@
             "autoVertical": false,
             "enableSidebar": true,
             "enableWorkspace": false,
-            "vertical": false,
+            "vertical": true,
             "widgetsFactor": 1.2,
             "workspaceZoom": 1.07
         },
@@ -111,7 +111,7 @@
                     "vertical": false
                 },
                 "enable": false,
-                "placementStrategy": "leastBusy",
+                "placementStrategy": "free",
                 "quote": {
                     "enable": false,
                     "text": "фну"
@@ -119,8 +119,8 @@
                 "showOnlyWhenLocked": false,
                 "style": "digital",
                 "styleLocked": "digital",
-                "x": 684.3000000000001,
-                "y": 586.7
+                "x": 718.9210937500002,
+                "y": 465.16015624999994
             },
             "weather": {
                 "enable": false,
@@ -230,7 +230,8 @@
         "monochromeIcons": false,
         "pinnedApps": [
             "org.kde.dolphin",
-            "kitty"
+            "kitty",
+            "org.quickshell"
         ],
         "pinnedOnStartup": true
     },
@@ -307,7 +308,7 @@
         "timeout": 1000
     },
     "osk": {
-        "layout": "English",
+        "layout": "Russian",
         "pinnedOnStartup": false
     },
     "overlay": {
