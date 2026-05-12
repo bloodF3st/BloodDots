@@ -84,6 +84,18 @@ Item {
             }
         }
 
+        CircleUtilButton { // pavucontrol
+            Layout.alignment: Qt.AlignVCenter
+            onClicked: Quickshell.execDetached(["bash", "-c", Config.options.apps.volumeMixer])
+            MaterialSymbol {
+                horizontalAlignment: Qt.AlignHCenter
+                fill: 0
+                text: "volume_up"
+                iconSize: Appearance.font.pixelSize.large
+                color: Appearance.colors.colOnLayer2
+            }
+        }
+
         Loader {
             active: Config.options.bar.utilButtons.showMicToggle
             visible: Config.options.bar.utilButtons.showMicToggle
