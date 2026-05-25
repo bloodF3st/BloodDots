@@ -18,6 +18,28 @@ EV_ABS = 3
 ABS_VOLUME = 32
 
 STEP_PERCENT = 2  # % per knob tick
+VOLUME_LIMIT = '1.5'
+
+
+def _get_all_sink_ids():
+    result = subprocess.run(['pactl', 'list', 'sinks', 'short'], capture_output=True, text=True)
+    ids = []
+    for line in result.stdout.splitlines():
+        parts = line.split()
+        if parts:
+            ids.append(parts[0])
+    return ids
+
+
+def _set_all_sinks_volume(pct, direction):
+    # Use pactl IDs (from pactl list sinks short) with pactl commands.
+    # wpctl uses different PipeWire object IDs — mixing them breaks volume control.
+    sign = '+' if direction == '+' else '-'
+    for sink_id in _get_all_sink_ids():
+        subprocess.run(
+            ['pactl', 'set-sink-volume', sink_id, f'{sign}{pct}'],
+            check=False,
+        )
 
 
 def find_devices():
@@ -59,16 +81,8 @@ def monitor(device):
                     continue
 
                 pct = f'{abs(delta) * STEP_PERCENT}%'
-                if delta > 0:
-                    subprocess.run(
-                        ['wpctl', 'set-volume', '@DEFAULT_AUDIO_SINK@', pct + '+', '-l', '1.5'],
-                        check=False,
-                    )
-                else:
-                    subprocess.run(
-                        ['wpctl', 'set-volume', '@DEFAULT_AUDIO_SINK@', pct + '-'],
-                        check=False,
-                    )
+                direction = '+' if delta > 0 else '-'
+                _set_all_sinks_volume(pct, direction)
     except OSError as e:
         print(f'ERROR on {device}: {e}', file=sys.stderr, flush=True)
 
