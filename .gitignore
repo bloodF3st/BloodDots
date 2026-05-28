@@ -21,3 +21,12 @@ configs/hypr/themes/*/wallpapers/
 # GPU / machine-specific overrides
 configs/hypr/monitors.conf
 configs/hypr/workspaces.conf
+
+# Home dotfiles - secrets
+home/.git-credentials
+home/.ssh/
+system/hostname
+
+# Nvim - generated/cache
+configs/nvim/.neoconf.json
+configs/nvim/lazy-lock.json
