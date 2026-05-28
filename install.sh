@@ -194,6 +194,14 @@ if [[ $SKIP_CONFIGS -eq 0 ]]; then
         info "Installed starship.toml"
     fi
 
+    # systemd user services
+    if [[ -d "$DOTFILES_DIR/configs/systemd-user" ]]; then
+        mkdir -p "$HOME/.config/systemd/user"
+        cp "$DOTFILES_DIR/configs/systemd-user/"*.service "$HOME/.config/systemd/user/" 2>/dev/null || true
+        systemctl --user daemon-reload
+        info "Installed systemd user services"
+    fi
+
     # ── 7. Firefox chrome ──────────────────────────────────────────────────────
     step "── 7. Firefox chrome ────────────────────────────────────────────────────"
     FF_PROFILE=$(find ~/.var/app/org.mozilla.firefox/config/mozilla/firefox \
